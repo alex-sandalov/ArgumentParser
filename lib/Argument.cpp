@@ -1,19 +1,19 @@
 #include <Argument.h>
 
 BaseArgument::BaseArgument(const char short_name, const char* long_name, const char* description)
-	: has_default_value(false)
-	, has_store_value(false)
+    : has_default_value(false)
+    , has_store_value(false)
     , has_multi_value(false)
     , is_positional(false)
     , has_value(false)
-	, short_name(short_name)
-	, long_name(long_name)
-	, description(description)
+    , short_name(short_name)
+    , long_name(long_name)
+    , description(description)
 {}
 
 template <typename Type>
 Argument<Type>::Argument(const char short_name, const char* long_name, const char* description)
-	: BaseArgument(short_name, long_name, description)
+    : BaseArgument(short_name, long_name, description)
 {}
 
 template <typename Type>

@@ -44,7 +44,7 @@ Argument<int>& ArgParser::AddIntArgument(const char* long_name, const char* desc
 
 Argument<int>& ArgParser::AddIntArgument(const char short_name, const char* long_name, const char* description) {
     arguments_[long_name] = new Argument<int>(short_name, long_name, description);
-	auto argument = dynamic_cast<Argument<int>*>(arguments_[long_name]);
+    auto argument = dynamic_cast<Argument<int>*>(arguments_[long_name]);
     if (!std::isspace(short_name)) {
         arguments_short_[short_name] = arguments_[long_name] ;
     }
@@ -65,7 +65,7 @@ Argument<std::string>& ArgParser::AddStringArgument(const char* long_name, const
 
 Argument<std::string>& ArgParser::AddStringArgument(char short_name, const char* long_name, const char* description) {
     arguments_[long_name] = new Argument<std::string>(short_name, long_name, description);
-	auto argument = dynamic_cast<Argument<std::string>*>(arguments_[long_name]);
+    auto argument = dynamic_cast<Argument<std::string>*>(arguments_[long_name]);
     if (!std::isspace(short_name)) {
         arguments_short_[short_name] = arguments_[long_name];
     }
@@ -103,7 +103,7 @@ bool ArgParser::IsPositional() {
 }
 
 bool ArgParser::Parse(const std::vector<std::string>& argv) {
-	bool is_value = true;
+    bool is_value = true;
     is_positional_ = IsPositional();
  
     for (int i = 1; i < argv.size(); ++i) {
@@ -113,7 +113,6 @@ bool ArgParser::Parse(const std::vector<std::string>& argv) {
 
         std::string_view long_argument = argument.substr(argument.rfind('-') + 1, index_equals - argument.rfind('-') - 1);
         const char short_argument = long_argument[0];
-
 
         if (!(arguments_.contains(long_argument) || arguments_short_.contains(short_argument)) && !is_positional_) {
             return false;

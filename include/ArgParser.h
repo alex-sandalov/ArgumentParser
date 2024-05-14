@@ -7,7 +7,7 @@ namespace ArgumentParser {
 
 class ArgParser {
 public:
-	ArgParser(const char* name);
+    ArgParser(const char* name);
     Argument<bool>& AddFlag(const char* long_name);
     Argument<bool>& AddFlag(const char short_name, const char* long_name);
     Argument<bool>& AddFlag(const char* long_name, const char* description);
@@ -25,7 +25,7 @@ public:
     size_t GetIntValue(const char* name_argument);
     size_t GetIntValue(const char* name_argument, size_t index);
     std::string GetStringValue(const char* name_argument);
-	std::string GetStringValue(const char* name_argument, size_t index);
+    std::string GetStringValue(const char* name_argument, size_t index);
     bool IsPositional();
     bool TypeDefinition();
 
