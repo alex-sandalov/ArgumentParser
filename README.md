@@ -3,11 +3,12 @@
 The ArgParser class facilitates command-line argument parsing, supporting boolean flags, integer arguments, and string arguments with optional short names and descriptions.
 
 ## Features
-**- Boolean Flags:** Add and parse boolean flags with short and long names.
-    **- Integer Arguments:** Handle integer arguments with optional descriptions.
-    **- String Arguments:** Manage string arguments with detailed descriptions.
-    **- Positional Arguments:** Support for positional arguments.
-    **- Flexible Parsing:** Easily parse command-line inputs and retrieve values.**
+## Features
+**- Boolean Flags:** Add and parse boolean flags with short and long names.  
+**- Integer Arguments:** Handle integer arguments with optional descriptions.  
+**- String Arguments:** Manage string arguments with detailed descriptions.  
+**- Positional Arguments:** Support for positional arguments.  
+**- Flexible Parsing:** Easily parse command-line inputs and retrieve values.**  
     
 ## Usage
 ```cpp
